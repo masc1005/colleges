@@ -11,4 +11,4 @@ server.use(Express.json())
 server.use(cors())
 server.use(routes)
 
-server.listen(3333, ()=> { console.log("Olá!") })
+server.listen(process.env.SERVER_PORT, ()=> { console.log("Olá!") })
