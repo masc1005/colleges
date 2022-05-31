@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/masc1005/colleges.git",
-  "author": "leoni <018210007@unifacs.edu.br>",
+  "author": "leoni",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev src/index.ts",
-    "generate": "prisma generate"
+    "generate": "prisma generate",
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "nodemon build/index.js"
   },
   "dependencies": {
     "@prisma/client": "3.14.0",

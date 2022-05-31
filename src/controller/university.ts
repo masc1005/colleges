@@ -6,7 +6,6 @@ import { api } from '../service/index'
 
 import { countries } from './countries'
 
-
 class University {
 
   async insert(req: Request, res: Response) {
