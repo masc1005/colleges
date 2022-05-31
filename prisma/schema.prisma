@@ -1,0 +1,18 @@
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://leonimasc:10203003l@bis2bis.yufefsu.mongodb.net/bis2bis"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model University {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  name    String
+  twoCode String
+  state   String? @default("None")
+  country String
+  domain  String[]
+  web     String[]
+}
