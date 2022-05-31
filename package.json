@@ -6,7 +6,8 @@
   "author": "leoni <018210007@unifacs.edu.br>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev src/index.ts"
+    "start": "ts-node-dev src/index.ts",
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "3.14.0",
