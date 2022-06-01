@@ -1,7 +1,13 @@
-import { Router } from 'express'
+import { Router, Request, Response } from 'express'
 import university from './controller/university'
 
 const routes = Router()
+
+
+routes.get('/', (req: Request, res: Response) => { 
+  return res.send('Olá')
+})
+
 
 routes.post('/university', university.insert)
 
