@@ -47,5 +47,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}          
-          script: cd /colleges && yarn && yarn generate && pm2 restart colleges
-            
+          script: cd colleges && yarn && yarn generate && pm2 restart colleges      
