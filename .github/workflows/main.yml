@@ -1,4 +1,5 @@
-name: CI
+source: "., !node_modules"
+          target: "colleges"                name: CI
 
 
 on:
@@ -50,5 +51,6 @@ jobs:
           script: |
             cd  /collges
             yarn 
-            yarn generate
+            yarn build
+            yarn generate          
             pm2 restart colleges
