@@ -48,7 +48,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}          
           script: |
-            cd  /collges
+            cd collges
             yarn 
             yarn build
             yarn generate          
