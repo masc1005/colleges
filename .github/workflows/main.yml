@@ -38,7 +38,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "., !node_modules"
-          target: "~/app/colleges"
+          target: "colleges"
                     
       - name: update api      
         uses: appleboy/ssh-action@master      
@@ -47,5 +47,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}          
-          script: cd ~/app/colleges && yarn && yarn generate && pm2 restart college
+          script: cd /colleges && yarn && yarn generate && pm2 restart colleges
             
