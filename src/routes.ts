@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express'
-import university from './controller/university'
+import { University } from './controller/index'
 
 const routes = Router()
 
@@ -9,15 +9,15 @@ routes.get('/', (req: Request, res: Response) => {
 })
 
 
-routes.post('/university', university.insert)
+routes.post('/university', University.insert)
 
-routes.get('/university', university.listMany)
-routes.get('/university/:id', university.listOne)
-routes.put('/university/:id', university.update)
-routes.delete('/university/:id', university.delete)
+routes.get('/university', University.listMany)
+routes.get('/university/:id', University.listOne)
+routes.put('/university/:id', University.update)
+routes.delete('/university/:id', University.delete)
 
 
-routes.post('/newUniversity', university.create)
+routes.post('/newUniversity', University.create)
 
 
 export default routes

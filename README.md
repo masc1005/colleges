@@ -4,6 +4,23 @@
 Colleges é uma api desenvolvida como forma 
 de desafio técnico para a empresa **INTEGRADO**;
 
+
+
+
+## Como executar o projeto:
+
+
+1. Configura cluster MongoDB atlas
+   1. Sendo necessário por o ip da maquina que o projeto vai ser executado.
+   2. Não é necessário criar database ou collection, pois será criado automaticamente em um dos passos a frente.
+2. clonar o projeto na maquina que for executar.
+3. rodar o comando `yarn` || `npm install`
+4. após instalar as dependências configuarar o.env, na raiz do projeto em um example com as variáveis necessárias.
+5. Com o .env configurado vamos instanciar o banco com o comando `yarn generate` || `npm run generate`
+6. Agora temos duas opções rodar em ambiente dev com o comando `yarn dev` || `npm run dev`, ou podemos executar em build que iria para produção, executando o comando `yarn build` || `npm run build`, após o comando executar, utilizamos o comando `yarn start` || `npm start`, para e o projeto estará rodando como ele executaria em ambiente de produção.
+7. Agora com o projeto rodando, levando em consideração as intruções de que será executado em uma maquina ubuntu 20.04 lts da amazon, será necessário liberar a porta que foi escolhida no .env no grupo de segurança da maquina virtual, sendo liberada, pode ser acessada através de: https://ipdamaquina:port/
+
+
 Me foi solicitado que consumisse a api de universidades: [api](http://universities.hipolabs.com/). selecionando os seguintes paises: [
   "argentina", "brazil", "chile", "colombia","paraguay", "peru", "suriname", "uruguay"
 ].
