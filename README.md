@@ -5,6 +5,8 @@ Colleges é uma api desenvolvida como forma
 de desafio técnico para a empresa **INTEGRADO**;
 
 
+**Para testes, também fiz deploy da aplicação, esta rodando com nginx e pm2, se quiserem testar acessem:** [Deploy](http://52.67.85.108/)
+
 
 
 ## Como executar o projeto:
@@ -37,11 +39,7 @@ de desafio técnico para a empresa **INTEGRADO**;
 * `/newUniversity`, Existe uma função para inserir uma unica universidade.
   * método `POST`
 
-
-
-
-routes.post('/newUniversity', University.create)
-
+#
 
 Me foi solicitado que consumisse a api de universidades: [api](http://universities.hipolabs.com/). selecionando os seguintes paises: [
   "argentina", "brazil", "chile", "colombia","paraguay", "peru", "suriname", "uruguay"
