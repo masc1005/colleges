@@ -37,11 +37,7 @@ de desafio técnico para a empresa **INTEGRADO**;
 * `/newUniversity`, Existe uma função para inserir uma unica universidade.
   * método `POST`
 
-
-
-
-routes.post('/newUniversity', University.create)
-
+#
 
 Me foi solicitado que consumisse a api de universidades: [api](http://universities.hipolabs.com/). selecionando os seguintes paises: [
   "argentina", "brazil", "chile", "colombia","paraguay", "peru", "suriname", "uruguay"
