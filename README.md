@@ -4,7 +4,7 @@
 Colleges é uma api desenvolvida como forma 
 de desafio técnico para a empresa **INTEGRADO**;
 
-http://52.67.85.108/
+
 **Para testes, também fiz deploy da aplicação, esta rodando com nginx e pm2, se quiserem testar acessem:** [Deploy](http://52.67.85.108/)
 
 
