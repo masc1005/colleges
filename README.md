@@ -19,6 +19,28 @@ de desafio técnico para a empresa **INTEGRADO**;
 5. Com o .env configurado vamos instanciar o banco com o comando `yarn generate` || `npm run generate`
 6. Agora temos duas opções rodar em ambiente dev com o comando `yarn dev` || `npm run dev`, ou podemos executar em build que iria para produção, executando o comando `yarn build` || `npm run build`, após o comando executar, utilizamos o comando `yarn start` || `npm start`, para e o projeto estará rodando como ele executaria em ambiente de produção.
 7. Agora com o projeto rodando, levando em consideração as intruções de que será executado em uma maquina ubuntu 20.04 lts da amazon, será necessário liberar a porta que foi escolhida no .env no grupo de segurança da maquina virtual, sendo liberada, pode ser acessada através de: https://ipdamaquina:port/
+8. Par povoar o banco com as universidades, é necessário acessar a rota `/university` no metodo `POST`
+
+
+## Rotas
+
+* `/`, rota principal retorna apenas uma mensagem de "olá"
+  * método `GET`.
+  
+* `/university`, Existem funções e diferentes métodos.
+  * método `POST`, vai cadastrar todas as universidades vindas da api, no banco de dados;
+  * método `GET`, vai listar todas as universidades cadastradas.
+ 
+* `/university/:id`, é necessário passar o id da universidade como parâmetro.
+  * método `PUT`, atualiza uma universidade;
+  * método `DELETE`, deleta uma universidade.
+* `/newUniversity`, Existe uma função para inserir uma unica universidade.
+  * método `POST`
+
+
+
+
+routes.post('/newUniversity', University.create)
 
 
 Me foi solicitado que consumisse a api de universidades: [api](http://universities.hipolabs.com/). selecionando os seguintes paises: [
@@ -33,7 +55,7 @@ Também como solicitado, a api busca todas as universidades salvas no banco de d
 
 Da mesma forma fazemos com a listagem de apenas uma universidade, acessando a rota: `/university/:id` e passando o parametro ID no método `GET`.
 
-Para inserir uma nova universidade no banco de dados, é necessário, acessar a rota `/newUniversity` no metodo `POST`, além de passar um json body com os seguintes dados:
+Para inserir uma nova universidade no banco de dados, é necessário, acessar a rota `/newUniversity` no método `POST`, além de passar um json body com os seguintes dados:
 
 {<br>
     "name": "UNIVERSIDADE SALVADOR",<br>
