@@ -55,7 +55,7 @@ class University {
     const data = await prisma.university.findFirst({where: { id: id }})
 
     if(!data){
-      return res.send({msg: "University not exists!"}).status(404).end()  
+      return res.send({msg: "University not exists!"}).status(404).end()
     }
 
     return res.send({data}).status(200).end()
